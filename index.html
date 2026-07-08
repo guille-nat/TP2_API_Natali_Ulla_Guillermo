@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rick & Morty API</title>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Rick & Morty</h1>
+
+        <button id="btnTodos" onclick="fetchTodosPersonajes()">Obtener Personajes</button>
+
+        <div class="filtros">
+            <h2>Filtrar Personajes</h2>
+            <form id="formFiltros" onsubmit="return fetchPersonajesFiltrados(event)">
+                <input type="text" id="name" placeholder="Nombre">
+                <input type="text" id="status" placeholder="Estado (alive, dead, unknown)">
+                <input type="text" id="species" placeholder="Especie">
+                <input type="text" id="type" placeholder="Tipo">
+                <input type="text" id="gender" placeholder="Género (female, male, genderless, unknown)">
+                <button type="submit" id="btnFiltrar">Buscar</button>
+            </form>
+        </div>
+
+        <div id="api-container"></div>
+    </div>
+
+    <script src="api.js"></script>
+</body>
+
+</html>
